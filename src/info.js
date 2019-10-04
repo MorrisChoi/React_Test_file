@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const Info = () =>{
 
@@ -17,7 +17,7 @@ const Info = () =>{
 
 
 	useEffect(() =>{
-		console.log('렌더링 완료');
+		console.log('렌더링 바뀔 때 마다  실행');
 		console.log({
 			name,
 			nickname
@@ -26,8 +26,13 @@ const Info = () =>{
 
 
 	useEffect(() =>{
-		console.log('첫 렌더링 완료');
+		console.log('마운트 실행');
 	}, []);
+
+		useEffect(() =>{
+		console.log(name , '렌더링 완료');
+	}, [name]);
+
 
 	return(
 		<div>

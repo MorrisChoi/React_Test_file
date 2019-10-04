@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 const EventPractice =  () =>{
 	const [names, setNames] = useState([
@@ -24,11 +24,14 @@ const EventPractice =  () =>{
 
 	const namesList = names.map(name => <li key = {name.id}>{name.text}</li>);
 
+	const test = useMemo(() => console.log('useMemo'), [nextId]);
+
 	return(
 		<>
 		<input value = {inputText} onChange = {onChange} />
 		<button onClick={onClick}>추가</button>
 		<ui>{namesList}</ui>
+		<div>:{JSON.stringify(names, ['id'])}</div>
 		</>
 
 		);
