@@ -7,6 +7,7 @@ import Book_Login from './Book_Login';
 import Login_data from './Login_data';
 import EventPractice from './EventPractice';
 import Info from './info';
+import SassComponent from './SassComponent';
 
 const App = () =>{
   return (
@@ -15,6 +16,7 @@ const App = () =>{
     <Login_data />
     <EventPractice />
     <Info />
+    <SassComponent />
     </div>
 
     );
